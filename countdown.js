@@ -1,4 +1,4 @@
-"use sctrict";
+"use strict";
 document.addEventListener("DOMContentLoaded", function() {
     var timers = document.getElementsByClassName("countdown");
     var now;
