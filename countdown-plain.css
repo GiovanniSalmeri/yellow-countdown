@@ -1,0 +1,22 @@
+.content .countdown.expired {
+    color: red;
+}
+.content span.countdown {
+    /* formatting for the textual timer*/
+}
+.content div.countdown {
+    text-align: center;
+    font-size: 2em;
+    border-top: solid 1px #C7C7C7;
+    border-bottom: solid 1px #C7C7C7;
+}
+.content div.countdown > span {
+    text-align: center;
+    padding: 0.1em;
+    display: inline-block;
+}
+.content div.countdown > span > span.label { 
+    text-transform: uppercase;
+    font-size: 0.23em;
+    display: block;
+}
