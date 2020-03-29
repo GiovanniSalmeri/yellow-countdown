@@ -54,7 +54,6 @@ class YellowCountdown {
             $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
             $style = $this->yellow->system->get("countdownStyle");
             $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}countdown-{$style}.css\" />\n";
-            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}countdown.css\" />\n";
             $output .= "<script type=\"text/javascript\" src=\"{$extensionLocation}countdown.js\"></script>\n";
         }
         return $output;
