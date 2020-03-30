@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (distance > 0) {
                         var acc = 0;
                         for (var j = 0; j <=3; j++) {
+                            if (timers[i].children[j].style.display == "none" && acc > 0) break;
                             var q = ~~(distance / units[j]);
                             timers[i].children[j].firstChild.textContent = q.toString().padStart(2, "0");
                             if (acc == 0) timers[i].children[j].style.display = "inline-block";
