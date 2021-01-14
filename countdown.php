@@ -1,11 +1,10 @@
 <?php
 // Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
-// Copyright (c) 2020 Giovanni Salmeri
+// Copyright (c) 2020-2021 Giovanni Salmeri
 // This file may be used and distributed under the terms of the public license.
 
 class YellowCountdown {
-    const VERSION = "0.8.10";
-    const TYPE = "feature";
+    const VERSION = "0.8.16";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -19,8 +18,8 @@ class YellowCountdown {
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
         if ($name=="countdown" && ($type=="block" || $type=="inline")) {
-            list($time, $precision, $style, $running, $expired) = $this->yellow->toolbox->getTextArgs($text);
-            $labels = $this->yellow->page->get("countdownSymbols") ? ["d", "d", "h", "h", "min", "min", "s", "s"] : array_map("trim", explode(",", $this->yellow->text->get("countdownLabels")));
+            list($time, $precision, $style, $running, $expired) = $this->yellow->toolbox->getTextArguments($text);
+            $labels = $this->yellow->page->get("countdownSymbols") ? ["d", "d", "h", "h", "min", "min", "s", "s"] : array_map("trim", explode(",", $this->yellow->language->getText("countdownLabels")));
             $precs = [ "days" => 0, "hours" => 1, "mins" => 2, "secs" => 3 ];
             $precisionCode = isset($precs[$precision]) ? $precs[$precision] : 2;
             if ($type=="block") {
@@ -40,7 +39,7 @@ class YellowCountdown {
                 $output .= "data-precision=\"".$precisionCode."\" ";
                 $output .= "data-running=\"".($running ? $running : "@time")."\" ";
                 $output .= "data-expired=\"".($expired ? $expired : "")."\" ";
-                $output .= "data-labels=\"".$this->yellow->text->get("countdownLabels")."\">";
+                $output .= "data-labels=\"".$this->yellow->language->getText("countdownLabels")."\">";
                 $output .= "</span>";
             }
         }

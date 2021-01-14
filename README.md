@@ -1,16 +1,8 @@
-Countdown 0.8.10
-=============
+# Countdown 0.8.16
+
 Textual or digital countdown timer.
 
 <p align="center"><img src="countdown-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
-
-## How to install extension
-
-1. [Download and install Datenstrom Yellow](https://github.com/datenstrom/yellow/).
-2. [Download extension](../../archive/master.zip). If you are using Safari, right click and select 'Download file as'.
-3. Copy `master.zip` into your `system/extensions` folder.
-
-To uninstall delete the [extension files](extension.ini).
 
 ## How to insert a countdown
 
@@ -26,6 +18,15 @@ The following arguments are available, all but the first argument are optional:
 
 `Alignement` is ignored for textual timers; `RunningMessage` and `ExpiredMessage` are ignored for digital timers.
 
+## Example
+
+Embedding a countdown timer, with various options:
+
+    [countdown 2021-07-21]
+    [countdown "2020-06-04 15:00"]
+    [countdown 2021-07-21 hours left] 
+    [countdown 2021-07-21 hours - "Still @time left!" "Sorry, the time is expired!"]  
+
 ## Settings
 
 The following settings can be configured in file `system/settings/system.ini`.
@@ -37,15 +38,10 @@ Remember also to set `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown
 
 If you want to add a new `fancy` style, write a `countdown-fancy.css`  file and put into the `system/extensions` folder. Do not modify the standard styles, since they will be overwritten in case of update of the extension.
 
-## Examples
+## Installation
 
-Embedding a countdown timer, with various options:
-
-    [countdown 2021-07-21]
-    [countdown "2020-06-04 15:00"]
-    [countdown 2021-07-21 hours left] 
-    [countdown 2021-07-21 hours - "Still @time left!" "Sorry, the time is expired!"]  
+[Download extension](https://github.com/GiovanniSalmeri/yellow-countdown/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
 
 ## Developer
 
-Giovanni Salmeri. [Get support](https://github.com/GiovanniSalmeri/yellow-countdown/issues).
+Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-countdown/issues).
