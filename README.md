@@ -29,7 +29,7 @@ Embedding a countdown timer, with various options:
 
 ## Settings
 
-The following settings can be configured in file `system/settings/system.ini`.
+The following settings can be configured in file `system/extensions/yellow-system.ini`.
 
 `CountdownSymbols` (default: `0`) = show SI symbols ("d", "h", "min", "s") instead of localised strings (e.g. "days", "hours" etc.), 1 or 0  
 `CountdownStyle` (default: `plain`) = digital countdown graphical style (you can choose between `plain`, `squared`, `button`)  
