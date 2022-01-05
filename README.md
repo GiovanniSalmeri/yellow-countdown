@@ -36,7 +36,7 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 Remember also to set `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown to work properly.
 
-If you want to add a new `fancy` style, write a `countdown-fancy.css`  file and put into the `system/extensions` folder. Do not modify the standard styles, since they will be overwritten in case of update of the extension.
+If you want to add a new `fancy` style, write a `countdown-fancy.css`  file and put into the `system/extensions` folder.
 
 ## Installation
 
