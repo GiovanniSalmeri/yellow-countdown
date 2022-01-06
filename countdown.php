@@ -1,7 +1,5 @@
 <?php
 // Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
-// Copyright (c) 2020-2021 Giovanni Salmeri
-// This file may be used and distributed under the terms of the public license.
 
 class YellowCountdown {
     const VERSION = "0.8.16";

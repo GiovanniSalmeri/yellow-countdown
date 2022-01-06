@@ -1,3 +1,5 @@
+// Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
+
 "use strict";
 document.addEventListener("DOMContentLoaded", function() {
     if (!String.prototype.padStart) { // polyfill
