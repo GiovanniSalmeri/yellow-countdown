@@ -4,7 +4,7 @@ Textual or digital countdown timer.
 
 <p align="center"><img src="countdown-screenshot.png?raw=true" width="795" height="836" alt="Screenshot"></p>
 
-## How to insert a countdown
+## How to show a countdown
 
 Create a `[countdown]` shortcut. The timer will be shown in a textual style if the shortcut is used in-line (i.e. among other text), in a digital style if it is used as a block (i.e. alone in a paragraph).
 
@@ -20,7 +20,7 @@ The following arguments are available, all but the first argument are optional:
 
 ## Example
 
-Embedding a countdown timer, with various options:
+Showing a countdown timer, with various options:
 
     [countdown 2021-07-21]
     [countdown "2020-06-04 15:00"]
