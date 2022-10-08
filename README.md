@@ -44,4 +44,4 @@ If you want to add a new `fancy` style, write a `countdown-fancy.css`  file and 
 
 ## Developer
 
-Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-countdown/issues).
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
