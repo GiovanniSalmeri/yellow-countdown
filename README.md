@@ -4,6 +4,10 @@ Textual or digital countdown timer.
 
 <p align="center"><img src="countdown-screenshot.png?raw=true" alt="Screenshot"></p>
 
+## How to install an extension
+
+[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-countdown/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+
 ## How to show a countdown
 
 Create a `[countdown]` shortcut. The timer will be shown in a textual style if the shortcut is used in-line (i.e. among other text), in a digital style if it is used as a block (i.e. alone in a paragraph).
@@ -18,7 +22,9 @@ The following arguments are available, all but the first argument are optional:
 
 `Alignment` is ignored for textual timers; `RunningMessage` and `ExpiredMessage` are ignored for digital timers.
 
-## Example
+If you want to customise the timer with CSS, write a `countdown-custom.css` file, put it into your `system/extensions` folder, open file `system/extensions/yellow-system.ini` and change `CountdownStyle: custom`. Another option to customise the timer with CSS is editing the files in your `system/themes` folder. It's recommended to use the latter option.
+
+## Examples
 
 Showing a countdown timer, with various options:
 
@@ -36,12 +42,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 Set `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown to work properly.
 
-If you want to add a new `fancy` style, write a `countdown-fancy.css`  file and put into the `system/extensions` folder.
-
-## Installation
-
-[Download extension](https://github.com/GiovanniSalmeri/yellow-countdown/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
-
 ## Developer
 
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
