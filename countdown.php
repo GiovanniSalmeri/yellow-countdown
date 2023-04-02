@@ -10,6 +10,22 @@ class YellowCountdown {
         $this->yellow = $yellow;
         $this->yellow->system->setDefault("countdownSymbols", "0");
         $this->yellow->system->setDefault("countdownStyle", "plain");
+        $this->yellow->language->setDefaults([
+            "Language: en",
+            "CountdownLabels: day, days, hour, hours, minute, minutes, second, seconds",
+            "Language: de",
+            "CountdownLabels: Tag, Tage, Stunde, Stunden, Minute, Minuten, Sekunde, Sekunden",
+            "Language: fr",
+            "CountdownLabels: jour, jours, heure, heures, minute, minutes, seconde, secondes",
+            "Language: it",
+            "CountdownLabels: giorno, giorni, ora, ore, minuto, minuti, secondo, secondi",
+            "Language: es",
+            "CountdownLabels: día, días, hora, horas, minutos, minutos, segundos, segundos",
+            "Language: nl",
+            "CountdownLabels: dag, dagen, uur, uren, minuut, minuten, seconde, seconden",
+            "Language: pt",
+            "CountdownLabels: dia, dias, hora, horas, minutos, minutos, segundos, segundos",
+        ]);
     }
     
     // Handle page content of shortcut
