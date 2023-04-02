@@ -22,7 +22,7 @@ class YellowCountdown {
             $precisionCode = isset($precs[$precision]) ? $precs[$precision] : 2;
             if ($type=="block") {
                 $output .= "<div class=\"countdown";
-                if (!empty($style)) $output .= " ".htmlspecialchars($style);
+                if (!is_string_empty($style)) $output .= " ".htmlspecialchars($style);
                 $output .= "\" ";
                 $output .= "role=\"timer\" ";
                 $output .= "data-time=\"".strtotime($time)."\">";
