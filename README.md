@@ -15,10 +15,10 @@ Create a `[countdown]` shortcut. The timer will be shown in a textual style if t
 The following arguments are available, all but the first argument are optional:
 
 `Deadline` = deadline in format `YYYY-MM-DD` (you can omit days) or `"YYYY-MM-DD HH:MM:SS"` (you can omit seconds)  
-`Precision` (default: `mins`) = precision of the timer (possible values: `days`, `hours`, `mins`, `secs`); whatever precision is set, it will scale up when the time is running out  
-`Alignment` (default: `center`) = countdown alignment, e.g. `left`, `center`, `right`  
-`RunningMessage` (default: `"@time"`) = text for showing the time left (`@time` will be replaced with the actual time)  
-`ExpiredMessage` (default: `""`) = text shown when the time is expired   
+`Precision` = precision of the timer (possible values: `days`, `hours`, `mins`, `secs`); whatever precision is set, it will scale up when the time is running out  
+`Alignment` = countdown alignment, e.g. `left`, `center`, `right`  
+`RunningMessage` = text for showing the time left (`@time` will be replaced with the actual time)  
+`ExpiredMessage` = text shown when the time is expired   
 
 `Alignment` is ignored for textual timers; `RunningMessage` and `ExpiredMessage` are ignored for digital timers.
 
@@ -37,8 +37,8 @@ Showing a countdown timer, with various options:
 
 The following settings can be configured in file `system/extensions/yellow-system.ini`.
 
-`CountdownSymbols` (default: `0`) = show SI symbols ("d", "h", "min", "s") instead of localised strings (e.g. "days", "hours" etc.), 1 or 0  
-`CountdownStyle` (default: `plain`) = digital countdown graphical style (you can choose between `plain`, `squared`, `button`)  
+`CountdownSymbols` = show SI symbols ("d", "h", "min", "s") instead of localised strings (e.g. "days", "hours" etc.), 1 or 0  
+`CountdownStyle` = digital countdown graphical style (you can choose between `plain`, `squared`, `button`)  
 
 Set `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown to work properly.
 
