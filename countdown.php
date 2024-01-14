@@ -2,7 +2,7 @@
 // Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
 
 class YellowCountdown {
-    const VERSION = "0.8.16";
+    const VERSION = "0.8.17";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -33,7 +33,7 @@ class YellowCountdown {
         $output = null;
         if ($name=="countdown" && ($type=="block" || $type=="inline")) {
             list($time, $precision, $style, $running, $expired) = $this->yellow->toolbox->getTextArguments($text);
-            $labels = $this->yellow->page->get("countdownSymbols") ? ["d", "d", "h", "h", "min", "min", "s", "s"] : array_map("trim", explode(",", $this->yellow->language->getText("countdownLabels")));
+            $labels = $this->yellow->system->get("countdownSymbols") ? ["d", "d", "h", "h", "min", "min", "s", "s"] : preg_split("/\s*,\s*/", $this->yellow->language->getText("countdownLabels"));
             $precs = [ "days" => 0, "hours" => 1, "mins" => 2, "secs" => 3 ];
             $precisionCode = isset($precs[$precision]) ? $precs[$precision] : 2;
             if ($type=="block") {
