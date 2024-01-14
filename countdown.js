@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     var timers = Array.from(document.getElementsByClassName("countdown"));
     var now, labels;
+    var offset = 0;
     if (timers) {
         function update() {
             var units = [86400, 3600, 60, 1];
             for (var i = 0; i < timers.length; i++) {
                 var block = timers[i].tagName == "DIV";
-                var distance = timers[i].dataset.time - now;
+                var distance = timers[i].dataset.time - now/1000;
                 if (block) {
                     if (distance > 0) {
                         var acc = 0;
@@ -53,13 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
             }
-            now++;
+            now = Date.now() + offset;
         }
         if (window.XMLHttpRequest) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 2) {
-                    now = ~~(Date.parse(xhttp.getResponseHeader("Date"))/1000);
+                    now = Date.parse(xhttp.getResponseHeader("Date"));
+                    offset = now - Date.now();
                     setInterval(update, 1000);
                 }
             };
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
             xhttp.setRequestHeader("Content-Type", "text/html");
             xhttp.send();
         } else {
-            now = ~~(Date.now()/1000);
+            now = Date.now();
             setInterval(update, 1000);
         }
     }
