@@ -2,7 +2,7 @@
 // Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
 
 class YellowCountdown {
-    const VERSION = "0.8.17";
+    const VERSION = "0.9.1";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -29,7 +29,7 @@ class YellowCountdown {
     }
     
     // Handle page content of shortcut
-    public function onParseContentShortcut($page, $name, $text, $type) {
+    public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="countdown" && ($type=="block" || $type=="inline")) {
             list($time, $precision, $style, $running, $expired) = $this->yellow->toolbox->getTextArguments($text);
@@ -64,10 +64,10 @@ class YellowCountdown {
     public function onParsePageExtra($page, $name) {
         $output = null;
         if ($name == "header") {
-            $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
+            $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
             $style = $this->yellow->system->get("countdownStyle");
-            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}countdown-{$style}.css\" />\n";
-            $output .= "<script type=\"text/javascript\" src=\"{$extensionLocation}countdown.js\"></script>\n";
+            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}countdown-{$style}.css\" />\n";
+            $output .= "<script type=\"text/javascript\" src=\"{$assetLocation}countdown.js\"></script>\n";
         }
         return $output;
     }

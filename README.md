@@ -1,4 +1,4 @@
-# Countdown 0.8.17
+# Countdown 0.9.1
 
 Textual or digital countdown timer.
 
@@ -22,7 +22,7 @@ The following arguments are available, all but the first argument are optional:
 
 `Alignment` is ignored for textual timers; `RunningMessage` and `ExpiredMessage` are ignored for digital timers.
 
-If you want to customise the timer with CSS, write a `countdown-custom.css` file, put it into your `system/extensions` folder, open file `system/extensions/yellow-system.ini` and change `CountdownStyle: custom`. Another option to customise the timer with CSS is editing the files in your `system/themes` folder. It's recommended to use the latter option.
+If you want to customise the timer with CSS, write a `countdown-custom.css` file, put it into your `system/themes` folder, open file `system/extensions/yellow-system.ini` and change `CountdownStyle: custom`.
 
 ## Examples
 
@@ -39,6 +39,8 @@ The following settings can be configured in file `system/extensions/yellow-syste
 
 `CountdownSymbols` = show SI symbols ("d", "h", "min", "s") instead of localised strings (e.g. "days", "hours" etc.), 1 or 0  
 `CountdownStyle` = digital countdown graphical style (you can choose between `plain`, `squared`, `button`)  
+
+Use [Perpage](https://github.com/GiovanniSalmeri/yellow-perpage) if you want to ovverride these settings for a single page.
 
 Set the right `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown to work properly.
 
