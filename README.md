@@ -40,8 +40,6 @@ The following settings can be configured in file `system/extensions/yellow-syste
 `CountdownSymbols` = show SI symbols ("d", "h", "min", "s") instead of localised strings (e.g. "days", "hours" etc.), 1 or 0  
 `CountdownStyle` = digital countdown graphical style (you can choose between `plain`, `squared`, `button`)  
 
-Use [Perpage](https://github.com/GiovanniSalmeri/yellow-perpage) if you want to ovverride these settings for a single page.
-
 Set the right `CoreServerTimezone` (e.g. `Europe/Rome`) for the countdown to work properly.
 
 ## Developer
