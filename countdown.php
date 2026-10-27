@@ -2,7 +2,7 @@
 // Countdown extension, https://github.com/GiovanniSalmeri/yellow-countdown
 
 class YellowCountdown {
-    const VERSION = "0.9.1";
+    const VERSION = "1.0.0";
     public $yellow;         //access to API
     
     // Handle initialisation
@@ -66,8 +66,8 @@ class YellowCountdown {
         if ($name == "header") {
             $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
             $style = $this->yellow->system->get("countdownStyle");
-            $output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}countdown-{$style}.css\" />\n";
-            $output .= "<script type=\"text/javascript\" src=\"{$assetLocation}countdown.js\"></script>\n";
+            $output .= "<link rel=\"stylesheet\" media=\"all\" href=\"{$assetLocation}countdown-{$style}.css\" />\n";
+            $output .= "<script src=\"{$assetLocation}countdown.js\"></script>\n";
         }
         return $output;
     }
